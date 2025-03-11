@@ -5,7 +5,8 @@ This project is an IMDb clone that utilizes the OMDB API to fetch and display mo
 
 ## Live Demo
 
-A live demo of the IMDb clone is available [here]
+A live demo of the IMDb clone is available
+https://tiwariaayu.github.io/Watchmate/
 
 
 ## Features
