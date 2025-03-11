@@ -1,4 +1,4 @@
-# IMDb Clone
+# WATCHMATE - IMDb Clone
 
 This project is an IMDb clone that utilizes the OMDB API to fetch and display movie data. It's built with **HTML, CSS, and JavaScript** and provides a seamless user experience.
 
