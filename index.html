@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://kit.fontawesome.com/29ad6f6f1a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieSearch</title>
+    <style>
+      /* Optional: Add a custom spinner for loading */
+      .spinner {
+        display: none;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Style for no results message */
+      .no-results {
+        font-size: 16px;
+        color: #777;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      /* Style for the search box */
+      .search-box {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 16px;
+        margin: 20px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Style for the movie list */
+      .movie-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .movie-item {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .movie-item:hover {
+        background-color: #f4f4f4;
+      }
+
+      .movie-item a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .movie-item a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive styling */
+      @media (max-width: 600px) {
+        .search-box {
+          font-size: 14px;
+        }
+
+        .movie-item {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">MovieSearch</div>
+      <a href="favourites.html" class="favourites-link">Go to Favourites</a>
+    </div>
+    <div class="container">
+      <!-- Search box with the dynamic loading spinner -->
+      <input
+        type="text"
+        id="search-input"
+        class="search-box"
+        placeholder="Search for a movie..."
+      />
+      <div id="loading-spinner" class="spinner"></div>
+
+      <!-- Search results will be displayed here -->
+      <ul id="search-results" class="movie-list">
+        <!-- Search results will be dynamically inserted here with JavaScript -->
+      </ul>
+
+      <!-- Display message when no results are found -->
+      <div id="no-results" class="no-results" style="display: none;">
+        No results found. Please try again.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
